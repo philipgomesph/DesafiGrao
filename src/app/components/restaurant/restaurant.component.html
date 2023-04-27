@@ -1,0 +1,17 @@
+<nav>
+  <div class="home-container">
+    <div class="restaurante" *ngFor="let restaurante of restaurantes">
+      <div></div>
+      <a routerLink="/detail/{{ restaurante._id }}">
+        <img class="foto" src="{{ restaurante.img }}" alt="" />
+        <ul>
+          <h3 class="restName">{{ restaurante.name }}</h3>
+
+          <p class="address">{{ restaurante.address }}</p>
+
+          <p class="phone">{{ restaurante.phone }}</p>
+        </ul>
+      </a>
+    </div>
+  </div>
+</nav>

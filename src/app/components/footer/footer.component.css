@@ -1,0 +1,30 @@
+footer {
+  border-top: 1px solid #dec129;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 200px;
+  background-color: #2e1901;
+}
+
+footer h3 {
+  margin-bottom: 1.2em;
+  color: #b4b1b1;
+}
+
+footer p {
+  color: #dec129;
+}
+footer span {
+  font-weight: bold;
+  color: #dec129;
+}
+
+footer {
+  height: 200px;
+  background-image: url("/assets/footer-background.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}

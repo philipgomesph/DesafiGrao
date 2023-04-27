@@ -1,0 +1,23 @@
+.restaurante {
+  padding-bottom: 1em;
+}
+.home-container {
+  display: grid;
+  align-items: center;
+  justify-content: space-between;
+  grid-template-columns: 1fr 1fr;
+  gap: 5px;
+  padding: 1em;
+  text-align: center;
+}
+.menu {
+  display: none;
+}
+
+.foto {
+  border-radius: 50px;
+  width: 20em;
+  border-width: 0.09px;
+  border-style: solid;
+  border-color: rgba(0, 0, 0, 0.151);
+}

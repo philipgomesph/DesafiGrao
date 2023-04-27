@@ -1,0 +1,28 @@
+nav {
+  display: flexbox;
+  justify-content: space-between;
+  padding: 1em;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.pratos {
+  margin-right: 1em;
+  list-style: none;
+  display: grid;
+}
+
+.bloco {
+  align-items: center;
+  justify-content: space-between;
+  gap: 5px;
+  padding: 1em;
+  text-align: start;
+}
+
+li {
+  padding: 1em;
+  border-radius: 10px;
+  border-width: 0.5px;
+  border-style: solid;
+  border-color: #dec129;
+}

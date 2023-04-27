@@ -1,0 +1,17 @@
+<nav>
+  <div>
+    <div class="bloco" *ngFor="let menu of menus">
+      <div class="pratos">
+        <ul>
+          <li>
+            <h2>{{ menu.menuName }}</h2>
+            <h4>Descrição:</h4>
+            <p>{{ menu.description }}</p>
+            <h4>Preço</h4>
+            <p>R$:{{ menu.price }}</p>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</nav>
