@@ -15,6 +15,8 @@ import { RestaurantFormComponent } from './components/restaurant-form/restaurant
 import { RestaurantService } from './services/restaurant.service';
 import { RestaurantComponent } from './components/restaurant/restaurant.component';
 import { MenuComponent } from './components/menu/menu.component';
+import { LoginComponent } from './components/login/login.component';
+import { UserService } from './services/user.service';
 @NgModule({
   declarations: [
     AppComponent,
@@ -27,6 +29,7 @@ import { MenuComponent } from './components/menu/menu.component';
     RestaurantFormComponent,
     RestaurantComponent,
     MenuComponent,
+    LoginComponent,
   ],
   imports: [
     BrowserModule,
@@ -35,7 +38,7 @@ import { MenuComponent } from './components/menu/menu.component';
     ReactiveFormsModule,
     HttpClientModule,
   ],
-  providers: [HttpClientModule, RestaurantService],
+  providers: [HttpClientModule, RestaurantService, UserService],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

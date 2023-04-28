@@ -6,7 +6,8 @@ nav {
 }
 
 .brand,
-.links {
+.links,
+.login {
   display: flex;
   justify-content: center;
   align-items: center;

@@ -10,3 +10,9 @@ export interface IResturant {
   phone: string;
   address: string;
 }
+
+export interface IMenuRestaurantName {
+  name: string;
+  phone: string;
+  address: string;
+}

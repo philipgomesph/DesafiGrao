@@ -1,5 +1,12 @@
 <nav>
   <div>
+    <div class="title">
+      <ul>
+        <h1>{{ restaurante.name }}</h1>
+
+        <p>{{ restaurante.address }} - {{ restaurante.phone }}</p>
+      </ul>
+    </div>
     <div class="bloco" *ngFor="let menu of menus">
       <div class="pratos">
         <ul>

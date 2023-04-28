@@ -1,0 +1,19 @@
+<nav>
+  <h2>Login</h2>
+  <form action="">
+    <p>
+      Email:
+      <input type="text" name="name" id="name" [(ngModel)]="user.email" />
+    </p>
+    <p>
+      Senha:
+      <input
+        type="password"
+        name="password"
+        id="password"
+        [(ngModel)]="user.password"
+      />
+    </p>
+    <button type="button" (click)="eventlogin()">Login</button>
+  </form>
+</nav>

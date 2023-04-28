@@ -2,6 +2,7 @@ import { Component, Input, OnInit } from '@angular/core';
 import { MenuService } from 'src/app/services/menu.service';
 import { ActivatedRoute, Router } from '@angular/router';
 import { RestaurantService } from 'src/app/services/restaurant.service';
+import { IMenuRestaurantName } from 'src/app/Restaurant';
 @Component({
   selector: 'app-menu',
   templateUrl: './menu.component.html',
@@ -9,6 +10,7 @@ import { RestaurantService } from 'src/app/services/restaurant.service';
 })
 export class MenuComponent implements OnInit {
   menus: Array<any> = new Array();
+  restaurante: any;
   constructor(
     private menuService: MenuService,
     private route: ActivatedRoute,
@@ -17,10 +19,16 @@ export class MenuComponent implements OnInit {
   ) {}
 
   query: any;
-  restaurantes: Array<any> = new Array();
+  //restaurantes: Array<any> = new Array();
+
+  // restaurantes: IMenuRestaurantName = {
+  //   name: 'string',
+  //   phone: 'string',
+  //   address: 'string',
+  // };
 
   ngOnInit(): void {
-    this.pegaQuery(), this.listaMenu();
+    this.pegaQuery(), this.listaMenu(), this.nomeRestaurante();
   }
 
   pegaQuery() {
@@ -39,13 +47,14 @@ export class MenuComponent implements OnInit {
     );
   }
 
-  listaRestaurante() {
-    this.restaurantService.listaRestaurant().subscribe(
-      (restaurantes) => {
-        this.restaurantes = restaurantes;
+  nomeRestaurante() {
+    this.menuService.nomeRestaurante(this.query).subscribe(
+      (rest) => {
+        this.restaurante = rest;
+        console.log(this.restaurante);
       },
       (err) => {
-        console.log('Erro ao listar restaurante', err);
+        console.log('Erro ao listar menu', err);
       }
     );
   }
